@@ -5,3 +5,4 @@ before_build:
   - git submodule update --init --recursive
 build_script:
   - .\make.bat
+test: off
