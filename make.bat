@@ -1,10 +1,4 @@
-for /f "usebackq tokens=1* delims=: " %%i in (`vswhere -latest -requires Microsoft.Component.MSBuild`) do (
-  if /i "%%i"=="installationPath" set InstallDir=%%j
-)
-
-if exist "%InstallDir%\VC\Auxiliary\Build\vcvarsall.bat" (
-  "%InstallDir%\VC\Auxiliary\Build\vcvarsall.bat" x86
-)
+call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x86
 
 echo install dependencies
 gacutil /i monodoc.dll
