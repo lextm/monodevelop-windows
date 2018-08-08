@@ -10,7 +10,7 @@ if exist "%InstallDir%\VC\Auxiliary\Build\vcvarsall.bat" (
 
 echo install dependencies
 gacutil /i monodoc.dll
-msiexec /i gtk-sharp-2.12.45.msi
+msiexec /i gtk-sharp-2.12.45.msi /quiet /qn /norestart /log install.log
 gettext-0.14.4.exe /verysilent /suppressmsgboxes
 
 echo build the source
