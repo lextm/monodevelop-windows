@@ -5,4 +5,9 @@ before_build:
   - git submodule update --init --recursive
 build_script:
   - .\make.bat
+after_build:
+  - .\after_build.bat
 test: off
+artifacts:
+  - path: monodevelop.zip
+    name: MonoDevelop Windows build
