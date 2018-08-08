@@ -1,5 +1,3 @@
-@echo off
-
 for /f "usebackq tokens=1* delims=: " %%i in (`vswhere -latest -requires Microsoft.Component.MSBuild`) do (
   if /i "%%i"=="installationPath" set InstallDir=%%j
 )
