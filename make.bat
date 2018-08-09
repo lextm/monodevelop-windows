@@ -15,6 +15,7 @@ cd monodevelop
 
 cd main
 echo restore packages
+external\nuget-binary\nuget.exe update /self
 external\nuget-binary\nuget.exe restore -DisableParallelProcessing
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
