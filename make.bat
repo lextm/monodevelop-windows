@@ -11,24 +11,28 @@ msiexec /i gtk-sharp-2.12.45.msi /quiet /qn /norestart /log install.log
 gettext-0.14.4.exe /verysilent /suppressmsgboxes
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
-echo build the source
 cd monodevelop
 
 cd main
+echo restore packages
 external\nuget-binary\nuget.exe restore -DisableParallelProcessing
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
+echo restore RefactoringEssentials
 msbuild /t:Restore /p:RestoreDisableParallel=true external\RefactoringEssentials\RefactoringEssentials\RefactoringEssentials.csproj
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
+echo paket bootstrapper
 external\fsharpbinding\.paket\paket.bootstrapper.exe
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
 cd external\fsharpbinding\
+echo paket restore
 .paket\paket.exe restore
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
 cd ..\..
+echo build main
 msbuild /p:Configuration=DebugWin32 /p:Platform="Any CPU" Main.sln
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
