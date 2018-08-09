@@ -38,3 +38,4 @@ msbuild /p:Configuration=DebugWin32 /p:Platform="Any CPU" Main.sln
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
 echo MonoDevelop.exe is in \monodevelop\main\build\bin directory.
+cd ..\..
