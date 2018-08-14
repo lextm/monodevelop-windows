@@ -7,3 +7,5 @@ Test repo to build MonoDevelop on Windows
 Tha artifacts can be downloaded from
 
 https://ci.appveyor.com/project/lextm/monodevelop-windows/build/artifacts
+
+**Please install [GTK# for .NET](https://www.monodevelop.com/download/#fndtn-download-win) before running this build.**
