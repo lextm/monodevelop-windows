@@ -1,5 +1,5 @@
-call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x86
-cd monodevelop
-
-cd setup\WixSetup
-msbuild WixSetup.wixproj /p:Platform=x86 /p:Configuration=Release
+copy .\monodevelop\main\external\mono-tools\windoc\WinDoc\lib\monodoc.dll .\monodevelop\setup\WixSetup\Libraries
+cd .\monodevelop\setup\WixSetup
+call build.bat
+copy .\bin\Release\Setup.msi ..\..\..
+cd ..\..\..
