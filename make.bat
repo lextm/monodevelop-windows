@@ -2,7 +2,7 @@ call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
 echo install dependencies
-gacutil /i monodoc.dll
+echo gacutil /i .\monodevelop\main\external\mono-tools\windoc\WinDoc\lib\monodoc.dll
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
 msiexec /i gtk-sharp-2.12.45.msi /quiet /qn /norestart /log install.log
@@ -14,9 +14,11 @@ gettext-0.14.4.exe /verysilent /suppressmsgboxes
 cd monodevelop
 
 cd main
+
 echo restore packages
+dotnet restore --force
 external\nuget-binary\nuget.exe update /self
-external\nuget-binary\nuget.exe restore -DisableParallelProcessing
+external\nuget-binary\nuget.exe restore -DisableParallelProcessing -force
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
 echo restore RefactoringEssentials
