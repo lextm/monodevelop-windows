@@ -1,4 +1,7 @@
+echo copy monodoc
 copy .\monodoc.dll .\monodevelop\setup\WixSetup\Libraries
+@IF %ERRORLEVEL% NEQ 0 EXIT /b 1
+
 cd .\monodevelop\setup\WixSetup
 call build.bat
 copy .\bin\Release\Setup.msi ..\..\..
