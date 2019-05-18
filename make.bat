@@ -2,7 +2,7 @@ call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
 echo install dependencies
-echo gacutil /i .\monodevelop\main\external\mono-tools\windoc\WinDoc\lib\monodoc.dll
+gacutil /i .\monodevelop\main\external\mono-tools\windoc\WinDoc\lib\monodoc.dll
 @IF %ERRORLEVEL% NEQ 0 EXIT /b 1
 
 msiexec /i gtk-sharp-2.12.45.msi /quiet /qn /norestart /log install.log
