@@ -11,3 +11,5 @@ test: off
 artifacts:
   - path: monodevelop.zip
     name: MonoDevelop Windows build
+  - path: Setup.msi
+    name: MonoDevelop Windows installer
