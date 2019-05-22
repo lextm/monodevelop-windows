@@ -8,6 +8,6 @@ Tha artifacts (portable ZIP package, and Windows MSI installer) matching MonoDev
 
 https://ci.appveyor.com/project/lextm/monodevelop-windows/build/artifacts
 
-**Please install [GTK# for .NET](https://www.monodevelop.com/download/#fndtn-download-win) before running this build.**
+**MonoDevelop 7.x has a hard dependency on GTK# and MSBuild 15, so please install [GTK# for .NET](https://www.monodevelop.com/download/#fndtn-download-win) and [Visual Studio 2017 Build Tools](https://chocolatey.org/packages/visualstudio2017buildtools/15.0.26228.0) before running this build.**
 
 MonoDevelop 8.x is still in active development and unstable, so no plan to ship artifacts for them yet.
