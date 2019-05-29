@@ -21,6 +21,7 @@ jobs:
 
       sudo apt install monodevelop
       sudo apt install intltool
+      sudo apt install libglade2.0
 
       cd monodevelop
       ./configure --profile=stable
@@ -43,6 +44,7 @@ jobs:
 
       brew install autoconf
       brew install automake
+      brew install mono
 
       cd monodevelop
       ./configure --profile=mac
