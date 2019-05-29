@@ -20,6 +20,7 @@ jobs:
       git submodule update --init --recursive
 
       sudo apt install monodevelop
+      sudo apt install intltool
 
       cd monodevelop
       ./configure --profile=stable
