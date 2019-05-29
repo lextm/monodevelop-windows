@@ -18,6 +18,9 @@ jobs:
   - script: |
       set -e
       git submodule update --init --recursive
+
+      sudo apt install mono-complete
+
       cd monodevelop
       ./configure --profile=stable
       make
@@ -36,6 +39,9 @@ jobs:
   - script: |
       set -e
       git submodule update --init --recursive
+
+      brew install autoconf
+
       cd monodevelop
       ./configure --profile=mac
       make
