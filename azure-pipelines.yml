@@ -41,6 +41,7 @@ jobs:
       git submodule update --init --recursive
 
       brew install autoconf
+      brew install autobuild
 
       cd monodevelop
       ./configure --profile=mac
