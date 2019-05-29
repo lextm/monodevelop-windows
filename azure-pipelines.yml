@@ -19,7 +19,7 @@ jobs:
       set -e
       git submodule update --init --recursive
 
-      sudo apt install mono-complete
+      sudo apt install monodevelop
 
       cd monodevelop
       ./configure --profile=stable
@@ -41,7 +41,7 @@ jobs:
       git submodule update --init --recursive
 
       brew install autoconf
-      brew install autobuild
+      brew install automake
 
       cd monodevelop
       ./configure --profile=mac
