@@ -4,29 +4,6 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
 jobs:
-- job: Linux
-
-  pool:
-    vmImage: 'ubuntu-16.04'
-
-  variables:
-    solution: '**/*.sln'
-    buildPlatform: 'Any CPU'
-    buildConfiguration: 'Release'
-
-  steps:
-  - script: |
-      set -e
-      git submodule update --init --recursive
-
-      sudo apt install monodevelop
-      sudo apt install intltool
-      sudo apt install libglade2.0
-      sudo apt install libssh2-1-dev
-
-      cd monodevelop
-      ./configure --profile=stable
-      make
 
 - job: macOS
 
