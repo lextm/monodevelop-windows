@@ -3,7 +3,7 @@ Test repo to build MonoDevelop on Windows
 
 |              | Windows/Mac | Linux |
 |:------------:|:-----------:|:-----:|
-| Build status | [![Build status](https://img.shields.io/azure-devops/build/lextudio/2e2314d2-e87a-4982-afd9-fed3291c61cb/8.svg?style=flat-square)](https://dev.azure.com/lextudio/monodevelop/_build?definitionId=8) | [![Build status](https://img.shields.io/travis/lextm/monodevelop-windows.svg?style=flat-square)](https://travis-ci.org/lextm/monodevelop-windows) |
+| Build status | [![Build status](https://img.shields.io/azure-devops/build/lextudio/2e2314d2-e87a-4982-afd9-fed3291c61cb/8.svg?style=flat-square)](https://dev.azure.com/lextudio/monodevelop/_build?definitionId=8) [![Downloads](https://img.shields.io/github/downloads/lextm/monodevelop-windows/total.svg)](https://github.com/lextm/monodevelop-windows/releases) | [![Build status](https://img.shields.io/travis/lextm/monodevelop-windows.svg?style=flat-square)](https://travis-ci.org/lextm/monodevelop-windows) |
 
 Tha artifacts (portable ZIP package, and Windows MSI installer) matching MonoDevelop 7.8 release.
 
