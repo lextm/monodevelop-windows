@@ -11,7 +11,7 @@ Downloads
 ---------
 Latest builds/installers can be downloaded from
 
-https://ci.appveyor.com/project/lextm/monodevelop-windows/build/artifacts
+https://github.com/lextm/monodevelop-windows/releases
 
 **MonoDevelop 7.x has hard dependency on GTK# and MSBuild 15, so please install [GTK# for .NET](https://www.monodevelop.com/download/#fndtn-download-win) and [Visual Studio 2017 Build Tools](https://chocolatey.org/packages/visualstudio2017buildtools/15.0.26228.0) (or simply any Visual Studio 2017 edition) before running it.**
 
